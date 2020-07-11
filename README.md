@@ -1,4 +1,5 @@
 # How To Set Up Django with Postgres, Nginx, and Gunicorn 
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
 
 ### Introduction
 
