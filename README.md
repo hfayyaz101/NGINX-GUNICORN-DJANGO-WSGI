@@ -1,5 +1,6 @@
 # How To Set Up Django with Postgres, Nginx, and Gunicorn 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
+https://stackoverflow.com/questions/16053364/make-sure-only-one-worker-launches-the-apscheduler-event-in-a-pyramid-web-app-ru
 
 ## Further Troubleshooting
 
