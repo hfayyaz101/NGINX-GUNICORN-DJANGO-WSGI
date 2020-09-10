@@ -382,7 +382,7 @@ After=network.target
 User=sammy
 Group=www-data
 WorkingDirectory=/home/sammy/myproject
-ExecStart=/home/sammy/myproject/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application
+ExecStart=/home/sammy/myproject/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --preload --bind unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application
 
 ```
 
@@ -399,7 +399,7 @@ After=network.target
 User=sammy
 Group=www-data
 WorkingDirectory=/home/sammy/myproject
-ExecStart=/home/sammy/myproject/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application
+ExecStart=/home/sammy/myproject/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --preload --bind unix:/home/sammy/myproject/myproject.sock myproject.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
