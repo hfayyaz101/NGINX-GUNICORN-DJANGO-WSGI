@@ -488,7 +488,8 @@ server {
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
-        root /home/sammy/myproject;
+        autoindex on;
+        alias /home/sammy/myproject/static/;
     }
 }
 
