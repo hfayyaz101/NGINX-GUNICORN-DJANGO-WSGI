@@ -2,6 +2,11 @@
 https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
 https://stackoverflow.com/questions/16053364/make-sure-only-one-worker-launches-the-apscheduler-event-in-a-pyramid-web-app-ru
 
+
+For running multiple Gunicorn services on one instance get help from as follows.
+https://stackoverflow.com/questions/42219633/running-two-instances-of-gunicorn
+
+
 ## Further Troubleshooting
 
 For additional troubleshooting, the logs can help narrow down root causes. Check each of them in turn and look for messages indicating problem areas.
