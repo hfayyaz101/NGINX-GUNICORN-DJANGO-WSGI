@@ -377,6 +377,35 @@ Next, we’ll open up the `[Service]` section. We’ll specify the user and grou
 
 We’ll then map out the working directory and specify the command to use to start the service. In this case, we’ll have to specify the full path to the Gunicorn executable, which is installed within our virtual environment. We will bind it to a Unix socket within the project directory since Nginx is installed on the same computer. This is safer and faster than using a network port. We can also specify any optional Gunicorn tweaks here. For example, we specified 3 worker processes in this case:
 
+Create a Gunicorn file name gunicorn.conf.py
+
+```
+# https://docs.gunicorn.org/en/latest/settings.html#config-file
+
+reload=False #This setting is intended for development. It will cause workers t$
+reload_engine='auto'
+reload_extra_files=[]
+spew=False
+check_config=False
+print_config=False
+accesslog='-'
+disable_redirect_access_to_syslog=False
+#access_log_format
+errorlog='-'
+loglevel='info' # debug, info, warning, error, critical
+capture_output=False
+logger_class='gunicorn.glogging.Logger'
+#logconfig
+workers=2
+preload_app=False
+threads=1
+bind='unix:/home/ubuntu/prod/xpulse_marketing/xpulsebackend/xpulsebackend/xpuls'
+timeout=30
+max_requests=0
+worker_class='gthread'
+
+```
+
 /etc/systemd/system/gunicorn.service
 
 ```
